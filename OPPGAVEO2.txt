@@ -1,0 +1,34 @@
+import java.util.Scanner; 
+
+
+public class Oppgave01 {
+    public static void main (string[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Skriv inn en poengusm mellom 0 og 100 ");
+        int poeng = scanner.nextInt;
+        char karakter;
+        
+        if (poeng < 0 || poeng > 100) {
+            system.out.println("Ugyldig verdi, poengsummen må være mellom 0 og 100");
+        }
+        
+        if (poeng >= 90) {
+            karakter = "A";
+        } else if (poeng >= 80) {
+            karakter = "B";
+        } else if (poeng >= 70) {
+            karakter = "C";
+        } else if (poeng >= 60) {
+            karater = "D";
+        } else if (poeng >= 50) {
+            karater = "E";
+        } else {
+            karakter = "F";
+        }
+        
+        System.out.println("Karkteren din er " + karakter);
+    }
+    
+}

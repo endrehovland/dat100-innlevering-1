@@ -1,0 +1,39 @@
+import java.util.scanner;
+
+public class OppgaveO {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Skriv inn inntekten din");
+        
+        int bruttoinntekt = scanner.nextInt();
+        double skattetrinn1 = 0.017;
+        double skattetrinn2 = 0.04;
+        double skattetrinn3 = 0.137;
+        double skattetrinn4 = 0.167;
+        double skattetrinn5 = 0.177;
+        
+        double skatt;
+        
+        
+        if (bruttoinntekt < 217401) {
+            skatt = 0;
+        } else if (bruttoinntekt < 306051) { 
+            skatt = (306051 - 217401) * skattetrinn1;
+        } else if (bruttoinntekt < 697151) {
+            skatt = ((306051 - 217401) * skattetrinn1) + ((bruttoinntekt - 306151) * skattetrinn2);
+        } else if (bruttoinntekt < 942 401) {
+            skatt = ((306051 - 217401) * skattetrinn1) + ((697151 - 306151) * skattetrinn2) + ((bruttoinntekt - 697151) * skattetrinn3);
+        } else if (bruttoinntekt < 1 410 751 ) { 
+            skatt = ((306051 - 217401) * skattetrinn1) + ((697151 - 306151) * skattetrinn2) + ((942400 - 697151) * skattetrinn3) + ((bruttoinntekt - 942401)* skattetrinn4);
+        } else {
+            skatt = ((306051 - 217401) * skattetrinn1) + ((697151 - 306151) * skattetrinn2) + ((942400 - 697151) * skattetrinn3) + ((1410751 - 942401)* skattetrinn4) + ((bruttoinntekt - 1410751)) * skattetrinn 5));
+        }
+        
+        
+        System.out.print("Skatten din er " + skatt);
+        scanner.close();
+        
+    }
+}
